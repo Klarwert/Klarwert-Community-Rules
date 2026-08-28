@@ -1,0 +1,10 @@
+{
+  "canonical_name": "vodafone",
+  "display_name": "Vodafone",
+  "default_category_template_key": "lebenshaltung.festnetz_internet",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "vodafone" },
+    { "type": "name_fuzzy", "value": "vodafone gmbh" }
+  ]
+}

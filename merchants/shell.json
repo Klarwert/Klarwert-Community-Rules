@@ -1,0 +1,10 @@
+{
+  "canonical_name": "shell",
+  "display_name": "Shell",
+  "default_category_template_key": "mobilitaet.tanken",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "shell" },
+    { "type": "name_fuzzy", "value": "shell tankstelle" }
+  ]
+}

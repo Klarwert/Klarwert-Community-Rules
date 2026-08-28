@@ -1,0 +1,66 @@
+name: CI
+
+# Läuft bei jedem Pull Request und Push. KEIN Auto-Merge, KEINE Verarbeitung von Issue-Bodies, kein
+# `execSync`/Shell-Interpolation mit Nutzerdaten irgendwo in diesem Workflow. Der einzige Schritt mit
+# Schreibrechten (publish-dist) verarbeitet ausschließlich bereits gemergte, menschlich reviewte
+# Inhalte auf `main` - niemals PR- oder Issue-Inhalte von Fremden.
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  validate-and-test:
+    name: Validate, build, test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - name: Validate data (schema, category keys, ReDoS-Heuristik, Duplikate, ...)
+        run: npm run validate
+      - name: Unit tests (Validator-Logik + reale Daten)
+        run: npm test
+      - name: Build distribution artifacts
+        run: npm run build
+      - name: Distribution-Vorschau (nur zur Kontrolle im Log, kein Schreibzugriff)
+        run: |
+          echo "--- dist/haendler.json (erste 20 Zeilen) ---"
+          head -n 20 dist/haendler.json
+          echo "--- dist/bankprofile.json (erste 20 Zeilen) ---"
+          head -n 20 dist/bankprofile.json
+
+  publish-dist:
+    name: Distributionsdateien auf main aktualisieren
+    needs: validate-and-test
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm ci
+      - run: npm run validate
+      - run: npm run build
+      - name: Commit dist/ falls geändert
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/
+          if git diff --staged --quiet; then
+            echo "dist/ unverändert, kein Commit nötig."
+          else
+            git commit -m "chore(dist): distribution rebuild [skip ci]"
+            git push
+          fi

@@ -1,0 +1,10 @@
+{
+  "canonical_name": "lidl",
+  "display_name": "Lidl",
+  "default_category_template_key": "lebenshaltung.lebensmittel_getraenke",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "lidl" },
+    { "type": "name_fuzzy", "value": "lidl vertriebs" }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Volksbank/GLS (VR)",
+  "country": "DE",
+  "status": "active",
+  "delimiter": ";",
+  "encoding": "windows-1252",
+  "date_format": "dd.MM.yyyy",
+  "decimal_format": "de",
+  "headers": ["Buchungstag", "Betrag", "Name Zahlungsbeteiligter", "Verwendungszweck"],
+  "column_map": {
+    "date": "Buchungstag",
+    "amount": "Betrag",
+    "counterparty": "Name Zahlungsbeteiligter",
+    "purpose": "Verwendungszweck"
+  },
+  "sample_rows": [
+    ["01.01.2026", "-75,00", "EDEKA", "Einkauf Lebensmittel"]
+  ]
+}

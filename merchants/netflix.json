@@ -1,0 +1,15 @@
+{
+  "canonical_name": "netflix",
+  "display_name": "Netflix",
+  "default_category_template_key": "shopping_unterhaltung.tv_video_musik",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "netflix" },
+    { "type": "name_fuzzy", "value": "netflix international" },
+    {
+      "type": "regex",
+      "field": "purpose",
+      "value": "(einkauf bei|bestellung bei|shop|verkaeufer|händler)[a-zäöü: ]{0,20}netflix"
+    }
+  ]
+}

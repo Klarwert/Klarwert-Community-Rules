@@ -1,0 +1,36 @@
+name: Neuer Händler / Kategorie-Korrektur
+description: Schlage einen neuen Händler oder eine Korrektur einer bestehenden Zuordnung vor, wenn du selbst keinen Pull Request erstellen möchtest.
+title: "Händler: "
+labels: ["merchant-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Hinweis:** Dieses Issue wird von niemandem automatisch verarbeitet - ein Mensch liest es und
+        erstellt bei Zustimmung einen Pull Request. Wenn du dich mit GitHub auskennst, ist ein
+        [eigener Pull Request](../CONTRIBUTING.md) schneller und direkter.
+
+        **Bitte niemals echte Kontodaten, Beträge oder Namen realer Personen hier einfügen.**
+  - type: input
+    id: canonical_name
+    attributes:
+      label: Händlername (wie er im Kontoauszug erscheint)
+      placeholder: "z. B. REWE, dm, Netflix"
+    validations:
+      required: true
+  - type: input
+    id: category
+    attributes:
+      label: Vorgeschlagene Kategorie
+      description: Schau in der App unter Kategorien nach dem genauen Namen, falls möglich.
+      placeholder: "z. B. Lebensmittel und Getränke"
+    validations:
+      required: true
+  - type: textarea
+    id: aliases
+    attributes:
+      label: Weitere Schreibweisen (optional)
+      description: Falls der Händler im Kontoauszug unter mehreren Namen auftaucht.
+      placeholder: |
+        - REWE MARKT GMBH
+        - REWE ONLINE

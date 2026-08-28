@@ -1,0 +1,10 @@
+{
+  "canonical_name": "paypal",
+  "display_name": "PayPal",
+  "default_category_template_key": null,
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "paypal" },
+    { "type": "name_fuzzy", "value": "paypal europe" }
+  ]
+}

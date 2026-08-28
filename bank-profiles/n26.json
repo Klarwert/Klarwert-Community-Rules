@@ -1,0 +1,19 @@
+{
+  "name": "N26",
+  "country": "DE",
+  "status": "active",
+  "delimiter": ",",
+  "encoding": "utf-8",
+  "date_format": "yyyy-MM-dd",
+  "decimal_format": "en",
+  "headers": ["Booking Date", "Amount (EUR)", "Partner Name", "Payment Reference"],
+  "column_map": {
+    "date": "Booking Date",
+    "amount": "Amount (EUR)",
+    "counterparty": "Partner Name",
+    "purpose": "Payment Reference"
+  },
+  "sample_rows": [
+    ["2026-01-01", "-12.34", "Spotify", "Monthly subscription"]
+  ]
+}

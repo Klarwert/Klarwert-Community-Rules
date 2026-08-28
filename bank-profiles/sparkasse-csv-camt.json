@@ -1,0 +1,26 @@
+{
+  "name": "Sparkasse (CSV-CAMT)",
+  "country": "DE",
+  "status": "active",
+  "delimiter": ";",
+  "encoding": "windows-1252",
+  "date_format": "dd.MM.yy",
+  "decimal_format": "de",
+  "headers": [
+    "Buchungstag",
+    "Betrag",
+    "Beguenstigter/Zahlungspflichtiger",
+    "Verwendungszweck",
+    "Kundenreferenz (End-to-End)"
+  ],
+  "column_map": {
+    "date": "Buchungstag",
+    "amount": "Betrag",
+    "counterparty": "Beguenstigter/Zahlungspflichtiger",
+    "purpose": "Verwendungszweck",
+    "external_id": "Kundenreferenz (End-to-End)"
+  },
+  "sample_rows": [
+    ["01.01.26", "-25,50", "REWE MARKT GMBH", "Lebensmittel", "NOTPROVIDED"]
+  ]
+}

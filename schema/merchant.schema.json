@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/Klarwert/Klarwert-Community-Rules/schema/merchant.schema.json",
+  "title": "Klarwert Community Merchant",
+  "description": "Eine deklarative Zuordnung Händlername -> Standardkategorie. Enthält bewusst NUR Struktur, niemals Beträge, Daten, IBANs oder andere personenbezogene/sensible Informationen. Kein SQL, kein Code, keine ausführbaren Regeln.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["canonical_name", "display_name", "status", "aliases"],
+  "properties": {
+    "canonical_name": {
+      "type": "string",
+      "description": "Stabiler Slug, MUSS exakt dem Dateinamen ohne '.json' entsprechen.",
+      "pattern": "^[a-z0-9_]{2,64}$"
+    },
+    "display_name": {
+      "type": "string",
+      "description": "Anzeigename in der App-UI.",
+      "minLength": 1,
+      "maxLength": 80
+    },
+    "default_category_template_key": {
+      "type": ["string", "null"],
+      "description": "Muss ein Eintrag aus schema/category-keys.json sein (wird vom Validator geprüft, nicht durch dieses JSON-Schema allein).",
+      "maxLength": 100
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "deprecated"],
+      "description": "'deprecated' statt Löschen, damit Klarwert einen bereits übernommenen Eintrag aktiv zurückziehen kann."
+    },
+    "aliases": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 30,
+      "items": { "$ref": "#/definitions/alias" }
+    }
+  },
+  "definitions": {
+    "alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type", "value"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["name_exact", "name_fuzzy", "regex"]
+        },
+        "field": {
+          "type": "string",
+          "enum": ["counterparty", "purpose", "any"],
+          "description": "Default (wenn weggelassen): counterparty."
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        }
+      }
+    }
+  }
+}

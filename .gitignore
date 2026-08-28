@@ -1,0 +1,5 @@
+node_modules/
+.DS_Store
+
+# dist/ wird bewusst NICHT ignoriert: das ist die von der Klarwert-App per raw.githubusercontent.com
+# geladene Distributionsdatei und muss auf main committed sein (siehe scripts/build.mjs).

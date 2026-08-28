@@ -1,0 +1,11 @@
+{
+  "canonical_name": "deutsche_bahn",
+  "display_name": "Deutsche Bahn",
+  "default_category_template_key": "mobilitaet.taxi_oepnv_sharing",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "db vertrieb" },
+    { "type": "name_exact", "value": "deutsche bahn" },
+    { "type": "name_fuzzy", "value": "db bahn" }
+  ]
+}

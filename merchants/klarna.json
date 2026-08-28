@@ -1,0 +1,10 @@
+{
+  "canonical_name": "klarna",
+  "display_name": "Klarna",
+  "default_category_template_key": null,
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "klarna" },
+    { "type": "name_fuzzy", "value": "klarna bank" }
+  ]
+}

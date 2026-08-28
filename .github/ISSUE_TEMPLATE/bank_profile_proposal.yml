@@ -1,0 +1,41 @@
+name: Neues Bank-Import-Profil
+description: Schlage ein CSV-Spaltenformat für eine noch nicht unterstützte Bank vor.
+title: "Bank-Profil: "
+labels: ["bank-profile-proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Wichtig:** Bank-Profile werden strenger geprüft als Händler-Zuordnungen, weil ein falsches
+        Profil (vertauschte Spalten, falsches Dezimaltrennzeichen) echte Kontostände verfälschen kann.
+        Es gibt hierfür **kein** automatisches Verfahren - ein Maintainer prüft jedes Profil manuell.
+
+        **Nur frei erfundene Beispielzeilen einfügen, niemals eine echte exportierte CSV-Zeile.**
+  - type: input
+    id: bank_name
+    attributes:
+      label: Name der Bank
+    validations:
+      required: true
+  - type: textarea
+    id: headers
+    attributes:
+      label: Spaltenüberschriften (aus der ersten Zeile deiner CSV-Datei)
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: sample_row
+    attributes:
+      label: Ein frei erfundenes Beispiel (gleiche Spaltenanzahl, erfundene Werte)
+      description: Ersetze jeden echten Wert durch ein Fantasiebeispiel, z. B. "Musterladen GmbH" statt eines echten Händlers.
+      render: text
+    validations:
+      required: true
+  - type: dropdown
+    id: delimiter
+    attributes:
+      label: Trennzeichen
+      options: [";", ",", "Tab"]
+    validations:
+      required: true

@@ -1,0 +1,21 @@
+{
+  "name": "klarwert-community-rules",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "description": "Community-gepflegte Händler-Kategorisierungen und Bank-CSV-Profile für Klarwert (https://github.com/Klarwert/Klarwert). Reine Daten, kein ausführbarer Code.",
+  "license": "CC0-1.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "validate": "node scripts/validate.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "vitest run",
+    "pretest": "npm run validate"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1",
+    "vitest": "^3.2.4"
+  }
+}

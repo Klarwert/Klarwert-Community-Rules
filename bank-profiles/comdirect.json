@@ -1,0 +1,20 @@
+{
+  "name": "comdirect",
+  "country": "DE",
+  "status": "active",
+  "delimiter": ";",
+  "encoding": "windows-1252",
+  "date_format": "dd.MM.yyyy",
+  "decimal_format": "de",
+  "headers": ["Buchungstag", "Umsatz in EUR", "Buchungstext"],
+  "column_map": {
+    "date": "Buchungstag",
+    "amount": "Umsatz in EUR",
+    "purpose": "Buchungstext",
+    "counterparty": "Buchungstext"
+  },
+  "extract_counterparty_from_purpose": true,
+  "sample_rows": [
+    ["01.01.2026", "-50,00", "Lastschrift Amazon EU S.a.r.l."]
+  ]
+}

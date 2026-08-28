@@ -1,0 +1,11 @@
+{
+  "canonical_name": "rewe",
+  "display_name": "REWE",
+  "default_category_template_key": "lebenshaltung.lebensmittel_getraenke",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "rewe" },
+    { "type": "name_fuzzy", "value": "rewe markt" },
+    { "type": "name_fuzzy", "value": "rewe online" }
+  ]
+}

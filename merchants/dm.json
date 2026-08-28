@@ -1,0 +1,11 @@
+{
+  "canonical_name": "dm",
+  "display_name": "dm-drogerie markt",
+  "default_category_template_key": "lebenshaltung.drogerie",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "dm drogerie" },
+    { "type": "name_exact", "value": "dm-drogerie markt" },
+    { "type": "name_fuzzy", "value": "dm drogeriemarkt" }
+  ]
+}

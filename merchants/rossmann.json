@@ -1,0 +1,10 @@
+{
+  "canonical_name": "rossmann",
+  "display_name": "Rossmann",
+  "default_category_template_key": "lebenshaltung.drogerie",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "rossmann" },
+    { "type": "name_fuzzy", "value": "dirk rossmann" }
+  ]
+}

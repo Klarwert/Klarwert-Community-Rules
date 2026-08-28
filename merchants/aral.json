@@ -1,0 +1,10 @@
+{
+  "canonical_name": "aral",
+  "display_name": "Aral",
+  "default_category_template_key": "mobilitaet.tanken",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "aral" },
+    { "type": "name_fuzzy", "value": "aral tankstelle" }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "canonical_name": "aldi",
+  "display_name": "ALDI",
+  "default_category_template_key": "lebenshaltung.lebensmittel_getraenke",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "aldi" },
+    { "type": "name_fuzzy", "value": "aldi sued" },
+    { "type": "name_fuzzy", "value": "aldi nord" }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "canonical_name": "amazon",
+  "display_name": "Amazon",
+  "default_category_template_key": "shopping_unterhaltung",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "amazon" },
+    { "type": "name_fuzzy", "value": "amazon.de" },
+    { "type": "name_fuzzy", "value": "amazon eu" }
+  ]
+}

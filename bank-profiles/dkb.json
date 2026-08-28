@@ -1,0 +1,39 @@
+{
+  "name": "DKB",
+  "country": "DE",
+  "status": "active",
+  "delimiter": ";",
+  "encoding": "utf-8",
+  "date_format": "dd.MM.yy",
+  "decimal_format": "de",
+  "headers": [
+    "Buchungsdatum",
+    "Wertstellung",
+    "Status",
+    "Zahlungspflichtige*r",
+    "Zahlungsempfänger*in",
+    "Verwendungszweck",
+    "Umsatztyp",
+    "IBAN",
+    "Betrag (€)",
+    "Gläubiger-ID",
+    "Mandatsreferenz",
+    "Kundenreferenz"
+  ],
+  "column_map": {
+    "date": "Buchungsdatum",
+    "value_date": "Wertstellung",
+    "amount": "Betrag (€)",
+    "counterparty_incoming": "Zahlungspflichtige*r",
+    "counterparty_outgoing": "Zahlungsempfänger*in",
+    "purpose": "Verwendungszweck",
+    "transaction_type": "Umsatztyp",
+    "recipient_iban": "IBAN",
+    "description": "Gläubiger-ID",
+    "external_id": "Kundenreferenz"
+  },
+  "import_all_columns": true,
+  "sample_rows": [
+    ["01.01.26", "03.01.26", "Gebucht", "", "Lidl", "Lastschrift", "Lastschrift", "DE12345678901234567890", "-12,34", "", "", "REF001"]
+  ]
+}

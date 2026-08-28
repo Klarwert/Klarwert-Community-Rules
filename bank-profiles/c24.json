@@ -1,0 +1,45 @@
+{
+  "name": "C24",
+  "country": "DE",
+  "status": "active",
+  "delimiter": ",",
+  "encoding": "utf-8",
+  "date_format": "dd.MM.yyyy",
+  "decimal_format": "de",
+  "headers": [
+    "Transaktionstyp",
+    "Buchungsdatum",
+    "Karteneinsatz",
+    "Betrag",
+    "Zahlungsempfänger",
+    "IBAN",
+    "BIC",
+    "Verwendungszweck",
+    "Beschreibung",
+    "Kontonummer",
+    "Kontoname",
+    "Kategorie",
+    "Unterkategorie",
+    "Bargeldabhebung"
+  ],
+  "column_map": {
+    "date": "Buchungsdatum",
+    "amount": "Betrag",
+    "counterparty": "Zahlungsempfänger",
+    "purpose": "Verwendungszweck",
+    "transaction_type": "Transaktionstyp",
+    "card_payment_at": "Karteneinsatz",
+    "recipient_iban": "IBAN",
+    "recipient_bic": "BIC",
+    "description": "Beschreibung",
+    "recipient_account_number": "Kontonummer",
+    "bank_account_label": "Kontoname",
+    "bank_category": "Kategorie",
+    "bank_subcategory": "Unterkategorie",
+    "cash_withdrawal_at": "Bargeldabhebung"
+  },
+  "import_all_columns": true,
+  "sample_rows": [
+    ["Ausgabe", "01.01.2026", "", "-12,34", "REWE", "", "", "", "", "", "Girokonto", "Lebensmittel", "", ""]
+  ]
+}

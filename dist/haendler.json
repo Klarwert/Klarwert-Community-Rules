@@ -1,0 +1,334 @@
+{
+  "schema_version": 1,
+  "source_version": "58f68ca7c09a",
+  "merchants": [
+    {
+      "canonical_name": "aldi",
+      "display_name": "ALDI",
+      "default_category_template_key": "lebenshaltung.lebensmittel_getraenke",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "aldi"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "aldi sued"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "aldi nord"
+        }
+      ]
+    },
+    {
+      "canonical_name": "amazon",
+      "display_name": "Amazon",
+      "default_category_template_key": "shopping_unterhaltung",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "amazon"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "amazon.de"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "amazon eu"
+        }
+      ]
+    },
+    {
+      "canonical_name": "aral",
+      "display_name": "Aral",
+      "default_category_template_key": "mobilitaet.tanken",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "aral"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "aral tankstelle"
+        }
+      ]
+    },
+    {
+      "canonical_name": "deutsche_bahn",
+      "display_name": "Deutsche Bahn",
+      "default_category_template_key": "mobilitaet.taxi_oepnv_sharing",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "db vertrieb"
+        },
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "deutsche bahn"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "db bahn"
+        }
+      ]
+    },
+    {
+      "canonical_name": "dm",
+      "display_name": "dm-drogerie markt",
+      "default_category_template_key": "lebenshaltung.drogerie",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "dm drogerie"
+        },
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "dm-drogerie markt"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "dm drogeriemarkt"
+        }
+      ]
+    },
+    {
+      "canonical_name": "edeka",
+      "display_name": "EDEKA",
+      "default_category_template_key": "lebenshaltung.lebensmittel_getraenke",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "edeka"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "edeka markt"
+        }
+      ]
+    },
+    {
+      "canonical_name": "klarna",
+      "display_name": "Klarna",
+      "default_category_template_key": null,
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "klarna"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "klarna bank"
+        }
+      ]
+    },
+    {
+      "canonical_name": "lidl",
+      "display_name": "Lidl",
+      "default_category_template_key": "lebenshaltung.lebensmittel_getraenke",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "lidl"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "lidl vertriebs"
+        }
+      ]
+    },
+    {
+      "canonical_name": "netflix",
+      "display_name": "Netflix",
+      "default_category_template_key": "shopping_unterhaltung.tv_video_musik",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "netflix"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "netflix international"
+        },
+        {
+          "type": "regex",
+          "field": "purpose",
+          "value": "(einkauf bei|bestellung bei|shop|verkaeufer|händler)[a-zäöü: ]{0,20}netflix"
+        }
+      ]
+    },
+    {
+      "canonical_name": "paypal",
+      "display_name": "PayPal",
+      "default_category_template_key": null,
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "paypal"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "paypal europe"
+        }
+      ]
+    },
+    {
+      "canonical_name": "rewe",
+      "display_name": "REWE",
+      "default_category_template_key": "lebenshaltung.lebensmittel_getraenke",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "rewe"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "rewe markt"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "rewe online"
+        }
+      ]
+    },
+    {
+      "canonical_name": "rossmann",
+      "display_name": "Rossmann",
+      "default_category_template_key": "lebenshaltung.drogerie",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "rossmann"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "dirk rossmann"
+        }
+      ]
+    },
+    {
+      "canonical_name": "shell",
+      "display_name": "Shell",
+      "default_category_template_key": "mobilitaet.tanken",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "shell"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "shell tankstelle"
+        }
+      ]
+    },
+    {
+      "canonical_name": "spotify",
+      "display_name": "Spotify",
+      "default_category_template_key": "shopping_unterhaltung.tv_video_musik",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "spotify"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "spotify ab"
+        },
+        {
+          "type": "regex",
+          "field": "purpose",
+          "value": "(einkauf bei|bestellung bei|shop|verkaeufer|händler)[a-zäöü: ]{0,20}spotify"
+        }
+      ]
+    },
+    {
+      "canonical_name": "telekom",
+      "display_name": "Telekom",
+      "default_category_template_key": "lebenshaltung.festnetz_internet",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "telekom"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "telekom deutschland"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "deutsche telekom"
+        }
+      ]
+    },
+    {
+      "canonical_name": "vodafone",
+      "display_name": "Vodafone",
+      "default_category_template_key": "lebenshaltung.festnetz_internet",
+      "status": "active",
+      "aliases": [
+        {
+          "type": "name_exact",
+          "field": "counterparty",
+          "value": "vodafone"
+        },
+        {
+          "type": "name_fuzzy",
+          "field": "counterparty",
+          "value": "vodafone gmbh"
+        }
+      ]
+    }
+  ]
+}

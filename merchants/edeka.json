@@ -1,0 +1,10 @@
+{
+  "canonical_name": "edeka",
+  "display_name": "EDEKA",
+  "default_category_template_key": "lebenshaltung.lebensmittel_getraenke",
+  "status": "active",
+  "aliases": [
+    { "type": "name_exact", "value": "edeka" },
+    { "type": "name_fuzzy", "value": "edeka markt" }
+  ]
+}

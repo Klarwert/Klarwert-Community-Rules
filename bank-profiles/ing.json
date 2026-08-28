@@ -1,0 +1,19 @@
+{
+  "name": "ING",
+  "country": "DE",
+  "status": "active",
+  "delimiter": ";",
+  "encoding": "windows-1252",
+  "date_format": "dd.MM.yyyy",
+  "decimal_format": "de",
+  "headers": ["Buchung", "Betrag", "Auftraggeber/Empfänger", "Verwendungszweck"],
+  "column_map": {
+    "date": "Buchung",
+    "amount": "Betrag",
+    "counterparty": "Auftraggeber/Empfänger",
+    "purpose": "Verwendungszweck"
+  },
+  "sample_rows": [
+    ["01.01.2026", "-50,00", "Amazon EU S.a.r.l.", "Bestellung 123-456"]
+  ]
+}
